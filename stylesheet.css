@@ -1,0 +1,381 @@
+/* Configuración global */
+body {
+    font-family: 'Courier Prime', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 80px; /* Ajuste del espaciado para la cabecera más fina */
+    }
+    
+    
+    /* Estilos para la cabecera */
+    header {
+    position: fixed; /* Ancla la cabecera en la parte superior */
+    top: 0; /* Asegura que esté pegada a la parte superior */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px 40px; /* Cabecera más fina con menos padding */
+    border-bottom: 1px solid black; /* Línea negra horizontal */
+    z-index: 1000; /* Asegura que la cabecera esté encima de otros elementos */
+    }
+    
+    
+    /* Estilos para el logo */
+    .logo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: letter-spacing 0.3s ease;
+    }
+    
+    
+    .logo:hover {
+    letter-spacing: 30px;
+    }
+    
+    
+    /* Estilos para la navegación */
+    nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+    
+    
+    nav ul li {
+    margin: 0 15px;
+    position: relative;
+    }
+    
+    
+    nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-family: 'Courier Prime', monospace;
+    position: relative;
+    transition: color 0.3s ease;
+    }
+    
+    
+    /* Animación de subrayado en la navegación */
+    nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease, left 0.3s ease;
+    }
+    
+    
+    nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    }
+    
+    
+    nav ul li a:hover {
+    color: #333;
+    }
+    
+    
+    /* Estilos para la sección Home */
+    #home {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 40px; /* Espaciado uniforme en los laterales */
+    background-color: #fff; /* Fondo blanco */
+    }
+    
+    
+    .home-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Espacio uniforme entre columnas */
+    gap: 40px; /* Espacio entre las dos columnas */
+    }
+    
+    
+    /* Estilos para la columna izquierda de Home */
+    .home-left {
+    display: flex;
+    flex-direction: column;
+    width: 50%; /* Ajusta el ancho de la columna izquierda */
+    gap: 20px;
+    }
+    
+    
+    .home-left .home-text {
+    font-family: 'Courier Prime', monospace;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #000;
+    text-align: left;
+    margin: 0; /* Quita márgenes adicionales */
+    }
+    
+    
+    .home-left .horizontal {
+    width: 100%;
+    }
+    
+    
+    /* Estilos para la columna derecha de Home */
+    .home-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%; /* Ajusta el ancho de la columna derecha */
+    gap: 20px;
+    align-items: flex-end; /* Alinea todo al borde derecho */
+    }
+    
+    
+    .home-right .vertical {
+    width: 100%;
+    }
+    
+    
+    .home-right .home-text {
+    font-family: 'Courier Prime', monospace;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #000;
+    text-align: right;
+    margin: 0; /* Quita márgenes adicionales */
+    }
+    
+    
+    /* Estilos para las imágenes en Home */
+    .home-image {
+    border: none; /* Eliminar borde negro */
+    transition: transform 0.3s ease; /* Añadir transición para la animación */
+    }
+    
+    
+    .home-image:hover {
+    transform: scale(1.1); /* Aumentar tamaño al pasar el cursor */
+    }
+    
+    
+    /* Estilos para la sección About */
+    #about {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 60px 30px;
+    text-align: center;
+    }
+    
+    
+    #about h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300; /* Peso más fino */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Solo animación de desplazamiento */
+    }
+    
+    
+    #about h2:hover {
+    transform: translateY(-5px); /* Movimiento hacia arriba al pasar el cursor */
+    }
+    
+    
+    #about div p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    }
+    
+    
+    /* Estilos para la sección Projects */
+    #projects {
+    background-color: #fff;
+    color: #000;
+    padding: 40px 30px;
+    }
+    
+    
+    #projects h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300; /* Peso más fino */
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    transition: transform 0.3s ease; /* Animación de desplazamiento */
+    }
+    
+    
+    #projects h2:hover {
+    transform: translateY(-5px); /* Movimiento hacia arriba al pasar el cursor */
+    }
+    
+    
+    .project-gallery {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+    }
+    
+    
+    .project-item {
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    width: 23%;
+    padding: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    }
+    
+    
+    .project-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    }
+    
+    
+    .project-item h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300; /* Peso más fino */
+    color: #333;
+    margin-bottom: 10px;
+    }
+    
+    
+    .project-item p {
+    font-family: 'Courier Prime', monospace;
+    font-size: 1rem;
+    color: #666;
+    }
+    
+    
+    .project-item:hover {
+    transform: translateY(-5px); /* Desplazamiento hacia arriba */
+    background-color: #f0f0f0; /* Color de fondo al pasar el cursor */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    }
+    
+    
+    /* Estilos para la sección Contact */
+    #contact {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 40px 30px;
+    }
+    
+    
+    #contact h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300; /* Peso más fino */
+    margin-bottom: 20px;
+    }
+    
+    
+    .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    }
+    
+    
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    }
+    
+    
+    .contact-form button {
+    background-color: #7e7e7e;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    }
+    
+    
+    .contact-form button:hover {
+    background-color: #000000;
+    }
+    
+    
+    /* Estilos para el footer */
+    footer {
+    text-align: center;
+    padding: 20px 20px;
+    background-color: #f1f1f1;
+    color: #000000;
+    }
+    
+    
+    /* Media Queries */
+    @media (max-width: 768px) {
+    #home {
+    flex-direction: column;
+    padding: 20px;
+    }
+    
+    
+    .home-container {
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    
+    .home-left,
+    .home-right {
+    width: 100%;
+    align-items: center;
+    }
+    
+    
+    .home-right .vertical {
+    width: 80%;
+    }
+    
+    
+    .home-left .horizontal {
+    width: 80%;
+    }
+    
+    
+    .home-text {
+    text-align: center;
+    }
+    }
+    
